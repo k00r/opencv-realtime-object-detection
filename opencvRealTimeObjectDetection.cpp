@@ -13,8 +13,8 @@ using namespace cv;
 int main()
 {
 	VideoCapture myCapture("testFile.mp4");
-	myCapture.set(CV_CAP_PROP_FRAME_WIDTH, 1920);
-	myCapture.set(CV_CAP_PROP_FRAME_HEIGHT, 1080);
+	myCapture.set(CV_CAP_PROP_FRAME_WIDTH, 1920);		//comment this if you are detecting from a video file
+	myCapture.set(CV_CAP_PROP_FRAME_HEIGHT, 1080);		//comment this if you are detecting from a video file
 	Mat img, gray;
 	Ptr<cuda::CascadeClassifier> cascade_gpu = cuda::CascadeClassifier::create("lbpcascade_humanFace_04-04-2018.xml");
 	cascade_gpu->setMinNeighbors(50);

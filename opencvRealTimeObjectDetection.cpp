@@ -12,7 +12,7 @@ using namespace cv;
 
 int main()
 {
-	VideoCapture myCapture("frankfurt.mp4");
+	VideoCapture myCapture("testFile.mp4");
 	myCapture.set(CV_CAP_PROP_FRAME_WIDTH, 1920);
 	myCapture.set(CV_CAP_PROP_FRAME_HEIGHT, 1080);
 	Mat img, gray;

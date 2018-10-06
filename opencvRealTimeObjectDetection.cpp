@@ -16,7 +16,7 @@ int main()
 	myCapture.set(CV_CAP_PROP_FRAME_WIDTH, 1920);		//comment this if you are detecting from a video file
 	myCapture.set(CV_CAP_PROP_FRAME_HEIGHT, 1080);		//comment this if you are detecting from a video file
 	Mat img, gray;
-	Ptr<cuda::CascadeClassifier> cascade_gpu = cuda::CascadeClassifier::create("lbpcascade_humanFace_04-04-2018.xml");
+	Ptr<cuda::CascadeClassifier> cascade_gpu = cuda::CascadeClassifier::create("lbpcascade_humanFace_04-04-2018.xml");		//initialize with desired model
 	cascade_gpu->setMinNeighbors(50);
 	cascade_gpu->setScaleFactor(1.1);
 	cascade_gpu->setMinObjectSize(cascade_gpu->getClassifierSize());
